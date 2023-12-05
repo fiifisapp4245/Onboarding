@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { platforms } from "../utils/platforms";
 
-const ShopSelectionForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
+const ShopSelectionForm = ({ onSaveAndContinue}) => {
   const [selectedShop, setSelectedShop] = useState("");
 
   const handleShopSelection = (platformName) => {
@@ -45,15 +45,7 @@ const ShopSelectionForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
           ))}
         </div>
 
-        <div className="flex justify-between mt-10">
-          {/* Previous Button */}
-          <button
-            type="button"
-            onClick={onGoToPreviousStep}
-            className="bg-white border text-gray-500 py-2 px-4 rounded-md hover:text-gray-700"
-          >
-            Previous
-          </button>
+        <div className="flex justify-center items-center mt-10">
           {/* Save and Continue Button */}
           <button
             type="button"

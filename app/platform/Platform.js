@@ -17,7 +17,6 @@ const Platform = () => {
         return (
           <ShopSelectionForm
             onSaveAndContinue={() => setCurrentStep(2)}
-            onGoToPreviousStep={() => setCurrentStep(1)}
           />
         );
       case 2:
@@ -70,20 +69,20 @@ const Platform = () => {
       {/* Steps Indicator */}
       <div className="lg:w-1/4 bg-blue-500 order-1 lg:order-1 h-full flex flex-col justify-between p-4">
         {/* logo */}
-        <div className="text-white font-bold">Recomaze.ai</div>
+        <div className="text-white text-xl lg:text-3xl xl:text-4xl font-extrabold">Recomaze.ai</div>
 
         {/* steps */}
         <div className="text-white">
           {[1, 2, 3, 4].map((step) => (
             <div
-              className={`flex items-center mb-8 ${
-                step !== currentStep ? "opacity-50" : ""
+              className={`flex items-center mb-8 transition-opacity ${
+                step === currentStep ? "opacity-100" : "opacity-50"
               }`}
               key={step}
             >
               <div
                 className={`bg-white text-blue-500 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-2 ${
-                  step !== currentStep ? "bg-gray-300" : ""
+                  step === currentStep ? "" : "bg-gray-300"
                 }`}
               >
                 {step}
@@ -91,14 +90,14 @@ const Platform = () => {
               <div>
                 <h2
                   className={`font-semibold text-xs lg:text-sm ${
-                    step !== currentStep ? "text-gray-500" : ""
+                    step === currentStep ? "" : "text-gray-500"
                   }`}
                 >
                   {stepDescriptions[step].title}
                 </h2>
                 <p
                   className={`text-xs lg:text-xs ${
-                    step !== currentStep ? "text-gray-500" : ""
+                    step === currentStep ? "" : "text-gray-500"
                   }`}
                 >
                   {stepDescriptions[step].description}

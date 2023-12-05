@@ -29,7 +29,7 @@ const VerificationForm = ({ onGoToPreviousStep, onSaveAndContinue }) => {
             <div className="mt-8 md:mt-10">
               <h3 className="text-lg md:text-xl font-semibold">STEP 1:</h3>
               <p>Download the plugin:</p>
-              <a href="recomaze-tracking.zip" className="border-4 text-blue-500 " download>
+              <a href="recomaze-tracking.zip" className=" text-blue-500 " download>
               
                 recomaze-tracking.zip
               </a>
