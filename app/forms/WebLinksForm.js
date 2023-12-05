@@ -100,8 +100,8 @@ const WebLinksForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
             {showCheckoutPageURLHelp && (
               <div className="absolute w-64 top-2 left-full ml-2 p-2 bg-white rounded shadow-md">
                 Provide the URL where customers are directed during the checkout
-                process. It typically includes 'https://' and the path to the
-                checkout page, like 'https://example.com/checkout.
+                process. It typically includes &quot;https://&quot; and the path to the
+                checkout page, like &quot;https://example.com/checkout.&quot;
               </div>
             )}
           </div>
@@ -129,7 +129,7 @@ const WebLinksForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
             {showSuccessPageURLHelp && (
               <div className="absolute top-2 w-64 left-full ml-2 p-2 bg-white rounded shadow-md">
                 Enter the URL of the page customers are redirected to after a
-                successful transaction. This is usually the 'Thank You' or order
+                successful transaction. This is usually the &quot;Thank You&quot; or order
                 confirmation page.
               </div>
             )}

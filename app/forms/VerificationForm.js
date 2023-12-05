@@ -70,7 +70,7 @@ const VerificationForm = ({ onGoToPreviousStep, onSaveAndContinue }) => {
           {/* Step 4 */}
           <div className="mt-8">
             <h3 className="text-lg font-semibold">STEP 4:</h3>
-            <p>After that, click on "import products."</p>
+            <p>After that, click on &quot;import products.&quot;</p>
           </div>
 
           {/* Step 5 */}
@@ -78,7 +78,7 @@ const VerificationForm = ({ onGoToPreviousStep, onSaveAndContinue }) => {
             <h3 className="text-lg font-semibold">STEP 5:</h3>
             <p>
               After the import has been carried out, return to step 4 in the
-              dashboard and click on "Verify Plugin."
+              dashboard and click on &quot;Verify Plugin.&quot;
             </p>
           </div>
         </div>
