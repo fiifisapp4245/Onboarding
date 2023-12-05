@@ -13,17 +13,56 @@ const Platform = () => {
 
   const renderForm = () => {
     switch (currentStep) {
-        case 1:
-          return <ShopSelectionForm onSaveAndContinue={() => setCurrentStep(2)} onGoToPreviousStep={() => setCurrentStep(1)} />;
-        case 2:
-          return <WebLinksForm onSaveAndContinue={() => setCurrentStep(3)} onGoToPreviousStep={() => setCurrentStep(1)} />;
-        case 3:
-          return <CustomizeForm onSaveAndContinue={() => setCurrentStep(4)} onGoToPreviousStep={() => setCurrentStep(2)} />;
-        case 4:
-          return <VerificationForm onSaveAndContinue={() => setCurrentStep(1)} onGoToPreviousStep={() => setCurrentStep(3)} />;
-        default:
-          return null;
-      }
+      case 1:
+        return (
+          <ShopSelectionForm
+            onSaveAndContinue={() => setCurrentStep(2)}
+            onGoToPreviousStep={() => setCurrentStep(1)}
+          />
+        );
+      case 2:
+        return (
+          <WebLinksForm
+            onSaveAndContinue={() => setCurrentStep(3)}
+            onGoToPreviousStep={() => setCurrentStep(1)}
+          />
+        );
+      case 3:
+        return (
+          <CustomizeForm
+            onSaveAndContinue={() => setCurrentStep(4)}
+            onGoToPreviousStep={() => setCurrentStep(2)}
+          />
+        );
+      case 4:
+        return (
+          <VerificationForm
+            onSaveAndContinue={() => setCurrentStep(1)}
+            onGoToPreviousStep={() => setCurrentStep(3)}
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
+  const stepDescriptions = {
+    1: {
+      title: "Choose Shop System",
+      description: "Which system are you using for your store",
+    },
+    2: {
+      title: "Add Your Website Links",
+      description: "Provide the links to your platform",
+    },
+    3: {
+      title: "Customization of Recommendations",
+      description: "Customize your recommendations",
+    },
+    4: {
+      title: "Verification",
+      description: "Verify the plugin",
+    },
   };
 
   return (
@@ -36,18 +75,33 @@ const Platform = () => {
         {/* steps */}
         <div className="text-white">
           {[1, 2, 3, 4].map((step) => (
-            <div className={`flex items-center mb-8 ${step !== currentStep ? 'opacity-50' : ''}`} key={step}>
-              {/* step number */}
-              <div className={`bg-white text-blue-500 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-2 ${step !== currentStep ? 'bg-gray-300' : ''}`}>
+            <div
+              className={`flex items-center mb-8 ${
+                step !== currentStep ? "opacity-50" : ""
+              }`}
+              key={step}
+            >
+              <div
+                className={`bg-white text-blue-500 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-2 ${
+                  step !== currentStep ? "bg-gray-300" : ""
+                }`}
+              >
                 {step}
               </div>
-              {/* step info */}
               <div>
-                <h2 className={`font-semibold text-xs lg:text-sm ${step !== currentStep ? 'text-gray-500' : ''}`}>
-                  Step {step}
+                <h2
+                  className={`font-semibold text-xs lg:text-sm ${
+                    step !== currentStep ? "text-gray-500" : ""
+                  }`}
+                >
+                  {stepDescriptions[step].title}
                 </h2>
-                <p className={`text-xs lg:text-xs ${step !== currentStep ? 'text-gray-500' : ''}`}>
-                  Step {step} description
+                <p
+                  className={`text-xs lg:text-xs ${
+                    step !== currentStep ? "text-gray-500" : ""
+                  }`}
+                >
+                  {stepDescriptions[step].description}
                 </p>
               </div>
             </div>
