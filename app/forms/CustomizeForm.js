@@ -45,7 +45,7 @@ const CustomizeForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
   };
 
   return (
-    <div className="md:h-full flex flex-col bg-slate-50 py-6">
+    <div className="lg:h-screen flex flex-col bg-slate-50 py-6 overflow-x-hidden">
       <div className="md:flex flex-col justify-center items-center">
         <h2 className="text-2xl font-semibold">
           Customize Product Recommendations
@@ -134,7 +134,6 @@ const CustomizeForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
                 className="block text-sm font-medium text-gray-700"
               >
                 In stock &quot;status translation&quot;
-                
               </label>
               <input
                 type="text"
@@ -338,7 +337,14 @@ const CustomizeForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
         </Modal>
 
         <div className="md:w-full flex justify-between mt-10">
-          {/* ... (previous button) */}
+          {/* Previous Button */}
+          <button
+            type="button"
+            onClick={onGoToPreviousStep}
+            className="bg-white border text-gray-500 py-2 px-4 rounded-md hover:text-gray-700"
+          >
+            Previous
+          </button>
           <div className="flex gap-2">
             <button
               type="button"
