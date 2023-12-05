@@ -133,7 +133,8 @@ const CustomizeForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
                 htmlFor="inStockStatus"
                 className="block text-sm font-medium text-gray-700"
               >
-                In stock" status translation *
+                In stock &quot;status translation&quot;
+                
               </label>
               <input
                 type="text"

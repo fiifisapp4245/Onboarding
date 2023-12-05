@@ -70,8 +70,8 @@ const WebLinksForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
             {/* Tooltip for help message */}
             {showWebsiteDomainHelp && (
               <div className="absolute top-2 w-64 left-full ml-2 p-2 bg-white rounded shadow-md">
-                Enter the main domain of your website, excluding 'https://' or
-                'www.' For example, 'example.com'.
+                Enter the main domain of your website, excluding &quot;https://&quot; or
+                &quot;www.&quot;For example,&quot;example.com&quot;.
               </div>
             )}
           </div>

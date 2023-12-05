@@ -17,7 +17,7 @@ const VerificationForm = ({ onGoToPreviousStep, onSaveAndContinue }) => {
     <div className="md:h-full flex flex-col bg-slate-50 py-6">
       <div className="md:flex flex-col justify-center items-center">
         <h2 className="text-2xl font-semibold">Verification</h2>
-        <p>You're almost there! help us verify the plugin</p>
+        <p>You are almost there! help us verify the plugin</p>
       </div>
       <div className="w-1/2 mx-auto mt-16">
         <div className=" bg-white py-6 px-6 rounded-lg mb-6">
@@ -42,8 +42,8 @@ const VerificationForm = ({ onGoToPreviousStep, onSaveAndContinue }) => {
           <div className="mt-8">
             <h3 className="text-lg font-semibold">STEP 2:</h3>
             <p>
-              After installing the plugin, go to the "plugins" page and search
-              for "recomaze tracking," then click on settings.
+              After installing the plugin, go to the &quot;plugins&quot; page and search
+              for &quot;recomaze tracking,&quot; then click on settings.
             </p>
           </div>
 
