@@ -87,7 +87,147 @@ const CustomizeForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* ... (other input fields) */}
+            <div>
+              <label
+                htmlFor="buyNowButton"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Buy now button message *
+              </label>
+              <input
+                type="text"
+                id="buyNowButton"
+                value={previewContent.buyNowButton}
+                onChange={(e) =>
+                  setPreviewContent((prev) => ({
+                    ...prev,
+                    buyNowButton: e.target.value,
+                  }))
+                }
+                className="mt-1 p-2 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              {" "}
+              <label
+                htmlFor="questChallenge"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Quest challenge *
+              </label>
+              <input
+                type="text"
+                id="questChallenge"
+                value={previewContent.questChallenge}
+                onChange={(e) =>
+                  setPreviewContent((prev) => ({
+                    ...prev,
+                    questChallenge: e.target.value,
+                  }))
+                }
+                className="mt-1 p-2 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="inStockStatus"
+                className="block text-sm font-medium text-gray-700"
+              >
+                In stock" status translation *
+              </label>
+              <input
+                type="text"
+                id="inStockStatus"
+                value={previewContent.inStockStatus}
+                onChange={(e) =>
+                  setPreviewContent((prev) => ({
+                    ...prev,
+                    inStockStatus: e.target.value,
+                  }))
+                }
+                className="mt-1 p-2 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="buyNow"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Like button message *
+              </label>
+              <input
+                type="text"
+                id="likeButton"
+                value={previewContent.likeButton}
+                onChange={(e) =>
+                  setPreviewContent((prev) => ({
+                    ...prev,
+                    likeButton: e.target.value,
+                  }))
+                }
+                className="mt-1 p-2 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="copiedLink"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Copied link message *
+              </label>
+              <input
+                type="text"
+                id="copiedLink"
+                value={previewContent.copiedLink}
+                onChange={(e) =>
+                  setPreviewContent((prev) => ({
+                    ...prev,
+                    copiedLink: e.target.value,
+                  }))
+                }
+                className="mt-1 p-2 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="dislikeButton"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Dislike button message *
+              </label>
+              <input
+                type="text"
+                id="dislikeButton"
+                value={previewContent.dislikeButton}
+                onChange={(e) =>
+                  setPreviewContent((prev) => ({
+                    ...prev,
+                    dislikeButton: e.target.value,
+                  }))
+                }
+                className="mt-1 p-2 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="endOfRecommendations"
+                className="block text-sm font-medium text-gray-700"
+              >
+                End of recommendations message *
+              </label>
+              <input
+                type="text"
+                id="endOfRecommendations"
+                value={previewContent.endOfRecommendations}
+                onChange={(e) =>
+                  setPreviewContent((prev) => ({
+                    ...prev,
+                    endOfRecommendations: e.target.value,
+                  }))
+                }
+                className="mt-1 p-2 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
           </div>
         </div>
 
@@ -98,7 +238,36 @@ const CustomizeForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* ... (other input fields) */}
+            <div>
+              <label
+                htmlFor="engagementTeaser"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Engagement teaser *
+              </label>
+              <input
+                type="text"
+                id="engagementTeaser"
+                value={engagementTeaser}
+                onChange={(e) => setEngagementTeaser(e.target.value)}
+                className="mt-1 p-2 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="triggerMessage"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Trigger message *
+              </label>
+              <input
+                type="text"
+                id="triggerMessage"
+                value={triggerMessage}
+                onChange={(e) => setTriggerMessage(e.target.value)}
+                className="mt-1 p-2 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
           </div>
         </div>
 
@@ -106,7 +275,36 @@ const CustomizeForm = ({ onSaveAndContinue, onGoToPreviousStep }) => {
         <div className="bg-white py-6 px-6 rounded-lg mb-6">
           <h3 className="text-base font-semibold mb-7">Color Settings</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* ... (other input fields) */}
+            <div>
+              <label
+                htmlFor="popupColor"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Select the pop-up color *
+              </label>
+              <input
+                type="color"
+                id="popupColor"
+                value={popupColor}
+                onChange={(e) => setPopupColor(e.target.value)}
+                className="mt-1 w-full border bg-slate-100 border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="borderColor"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Select the pop-up border color *
+              </label>
+              <input
+                type="color"
+                id="borderColor"
+                value={borderColor}
+                onChange={(e) => setBorderColor(e.target.value)}
+                className="mt-1 w-full  bg-slate-100 rounded-md"
+              />
+            </div>
           </div>
         </div>
 
